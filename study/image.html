@@ -1,112 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        /* 链接伪类选择器 */
+        a:link {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:active {
+            color: green;
+        }
+
+        input:focus {
+            outline: none;
+            border: 2px solid blue;
+            background-color: beige;
+        }
+    </style>
 </head>
+
 <body>
-<p>   12341<br />233</p>
-<p> qwe<strong>xzczx</strong></p>
-<em>倾斜</em>
-<del>删除线</del>
-<ins>下划线</ins>
-<div  >独占一行
-    <sapn>123</sapn>
-    <sapn>234</sapn>
-    <sapn>345</sapn>
-</div>
+    <p> 12341<br />233</p>
+    <p> qwe<strong>xzczx</strong></p>
+    <em>倾斜</em>
+    <del>删除线</del>
+    <ins>下划线</ins>
+    <div>独占一行
+        <sapn>123</sapn>
+        <sapn>234</sapn>
+        <sapn>345</sapn>
+    </div>
 
-<p><h4>图像使用:</h4><img src="crash查找.png" alt="找不到图像文件" title="title提示文字" width="200" height="100" border="1"></p>
-<p><h4>图像使用:</h4><img src="crash查找1.png" alt="找不到图像文件"></p>
-<p><a href="http://www.qq.com" target="_self">腾讯QQ</a></p>
-<!--_blank _self 是链接打开方式,默认是_blank 即新页面打开-->
-<p><a HREF="image.html" target="_blank" >内部链接</a></p>
-<p> <a HREF="image.html" target="_blank" ><img src="crash查找.png">元素链接</a></p>
-<!--不能是图片不然就直接打开了,要zip或者别的形式-->
-<p><a href="crash查找.png">下载文件链接</a></p>
-<p><a href="#锚点">锚点链接</a></p>
-<h1 id="锚点">锚点链接</h1>
-<p>   12341 &nbsp;空格 &gt;大于号  &lt;小于号</p>
+    <p>
+    <h4>图像使用:</h4><img src="crash查找.png" alt="找不到图像文件" title="title提示文字" width="200" height="100" border="1"></p>
+    <p>
+    <h4>图像使用:</h4><img src="crash查找1.png" alt="找不到图像文件"></p>
+    <p><a href="http://www.qq.com   " target="_self">腾讯QQ</a></p>
+    <!--_blank _self 是链接打开方式,默认是_blank 即新页面打开-->
+    <p><a HREF="image.html" target="_blank">内部链接</a></p>
+    <p> <a HREF="image.html" target="_blank"><img src="crash查找.png">元素链接</a></p>
+    <!--不能是图片不然就直接打开了,要zip或者别的形式-->
+    <p><a href="crash查找.png">下载文件链接</a></p>
+    <p><a href="#锚点">锚点链接</a></p>
+    <h1 id="锚点">锚点链接</h1>
+    <p> 12341 &nbsp;空格 &gt;大于号 &lt;小于号</p>
 
-表格:
-<table  border="1" cellpadding="15" cellspacing="0" width="500">
-    <thead>
-        <tr>
-            <th><strong>第一行表头</strong></th>
-            <th>第一行表头</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan="2">第一行单元格1</td>
-<!--            <td>第一行单元格2</td>-->
-        </tr>
-        <tr>
-            <td rowspan="2">第2行单元格1</td>
-            <td>第2行单元格2</td>
-        </tr>
-        <tr>
-<!--            <td>第3行单元格1</td>-->
-            <td>第3行单元格2</td>
-        </tr>
-        <tr>
-            <td>第4行单元格1</td>
-            <td>第4行单元格2</td>
-        </tr>
-    </tbody>
-</table>
-无序列表：
-<ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-</ul>
-有序列表:
-<ol>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-</ol>
-自定义列表:
-<dl>
-    <dt>自定义列表头</dt>
-    <dd>元素1</dd>
-    <dd>元素2</dd>
-    <dd>元素3</dd>
-</dl>
+    表格:
+    <table border="1" cellpadding="15" cellspacing="0" width="500">
+        <thead>
+            <tr>
+                <th><strong>第一行表头</strong></th>
+                <th>第一行表头</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">第一行单元格1</td>
+                <!--            <td>第一行单元格2</td>-->
+            </tr>
+            <tr>
+                <td rowspan="2">第2行单元格1</td>
+                <td>第2行单元格2</td>
+            </tr>
+            <tr>
+                <!--            <td>第3行单元格1</td>-->
+                <td>第3行单元格2</td>
+            </tr>
+            <tr>
+                <td>第4行单元格1</td>
+                <td>第4行单元格2</td>
+            </tr>
+        </tbody>
+    </table>
+    无序列表：
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    有序列表:
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+    自定义列表:
+    <dl>
+        <dt>自定义列表头</dt>
+        <dd>元素1</dd>
+        <dd>元素2</dd>
+        <dd>元素3</dd>
+    </dl>
 
-表单：
-<form action="www.sirius.com" method="post" name="name1">
-    用户名：<input type="text" name="username"  value="input your uasername" maxlength="6"> <br>
-    密码：<input type="password" name="password"> <br>
+    表单：
+    <form action="www.sirius.com" method="post" name="name1">
+        用户名：<input type="text" name="username" value="input your uasername" maxlength="6"> <br>
+        密码：<input type="password" name="password"> <br>
 
-    sex: <label for="man">man</label><input type="radio" name="sex" value="1" id="man">
-         <label for="women">women</label><input type="radio" name="sex" value="2" checked="checked" id="women"> <br>
-    habit: food<input type="checkbox" name="habit" value="food" checked="checked">
-    <input type="submit" value="login">
-    <input type="reset" value="reset">
-    <input type="button" value="short text">
-    <input type="file" value="upload images">
-</form>
-下拉表单:
-<select>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option selected="selected">4</option>
-</select>
-文本域:
-<form>
-    评论:
-    <textarea>
+        sex: <label for="man">man</label><input type="radio" name="sex" value="1" id="man">
+        <label for="women">women</label><input type="radio" name="sex" value="2" checked="checked" id="women"> <br>
+        habit: food<input type="checkbox" name="habit" value="food" checked="checked">
+        <input type="submit" value="login">
+        <input type="reset" value="reset">
+        <input type="button" value="short text">
+        <input type="file" value="upload images">
+    </form>
+    下拉表单:
+    <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option selected="selected">4</option>
+    </select>
+    文本域:
+    <form>
+        评论:
+        <textarea>
         1111111131231adxc
         123
         asd
         zxc
     </textarea>
-</form>
+    </form>
 
 </body>
+
 </html>

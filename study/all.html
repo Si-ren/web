@@ -5,7 +5,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-
+        a {
+            width: 100px;
+            height: 100px;
+            /*行元素转换为块元素*/
+            display: block;
+        }
+        span {
+        /*    转换为行内块元素*/
+            display: inline-block;
+        }
+        div {
+            /*块元素转换为行元素*/
+            display: inline;
+        }
         /* 链接伪类选择器 */
         a:link {
             color: blue;
@@ -29,11 +42,16 @@
             border: 2px solid blue;
             background-color: beige;
         }
+        .div-image {
+            width: 600px ;
+            height: 600px;
+            background-image: url(crash查找.png);
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 
 <body>
-<<<<<<< HEAD
 <!--文字类元素内不能放放块级元素，例：<p>和<h1~6>内不能放div-->
 <p>    12341<br />233</p>
 <p> qwe<strong>xzczx</strong></p>
@@ -45,18 +63,16 @@
     <sapn>234 </sapn>
     <sapn>345</sapn>
 </div>
-=======
     <p> 12341<br />233</p>
     <p> qwe<strong>xzczx</strong></p>
     <em>倾斜</em>
     <del>删除线</del>
     <ins>下划线</ins>
-    <div>独占一行
+    <div class="div-image">独占一行
         <sapn>123</sapn>
         <sapn>234</sapn>
         <sapn>345</sapn>
     </div>
->>>>>>> 8652a0ea2820a198c14ea020c446777418857744
 
     <p>
     <h4>图像使用:</h4><img src="crash查找.png" alt="找不到图像文件" title="title提示文字" width="200" height="100" border="1"></p>
@@ -64,8 +80,8 @@
     <h4>图像使用:</h4><img src="crash查找1.png" alt="找不到图像文件"></p>
     <p><a href="http://www.qq.com   " target="_self">腾讯QQ</a></p>
     <!--_blank _self 是链接打开方式,默认是_blank 即新页面打开-->
-    <p><a HREF="image.html" target="_blank">内部链接</a></p>
-    <p> <a HREF="image.html" target="_blank"><img src="crash查找.png">元素链接</a></p>
+    <p><a HREF="all.html" target="_blank">内部链接</a></p>
+    <p> <a HREF="all.html" target="_blank"><img src="crash查找.png">元素链接</a></p>
     <!--不能是图片不然就直接打开了,要zip或者别的形式-->
     <p><a href="crash查找.png">下载文件链接</a></p>
     <p><a href="#锚点">锚点链接</a></p>
@@ -152,7 +168,7 @@
     </textarea>
     </form>
 
-
+    <div class="div-image">图片背景</div>
 </body>
 
 </html>

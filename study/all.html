@@ -5,20 +5,30 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        /* CSS第一行代码 */
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
         a {
             width: 100px;
             height: 100px;
             /*行元素转换为块元素*/
             display: block;
         }
+
         span {
-        /*    转换为行内块元素*/
+            /*    转换为行内块元素*/
             display: inline-block;
         }
+
         div {
             /*块元素转换为行元素*/
             display: inline;
+            /* overflow: hidden; */
         }
+
         /* 链接伪类选择器 */
         a:link {
             color: blue;
@@ -42,27 +52,54 @@
             border: 2px solid blue;
             background-color: beige;
         }
+
         .div-image {
-            width: 600px ;
+            width: 600px;
             height: 600px;
             background-image: url(crash查找.png);
             background-repeat: no-repeat;
+        }
+
+        td {
+            border: 1px solid greenyellow;
+            border-left-color: aqua;
+            /* 合并相邻的边框 */
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        th {
+            border-collapse: collapse;
+            /* 内边距，-left，-right，-top，-botton，左右上下边距 */
+            padding-left: 20px;
+            /* 边距复合写法 ,对应上右下左*/
+            /* 值的个数不一样，代表边距不一样，比如两个值就是第一个值为上下边距，第二个值是左右边距 */
+            /* 三个值：上边距，左右边距，下边距 */
+            /* padding: 10px 20px 30px 40px; */
+        }
+
+        .out {
+            /* 外边距 */
+            /* 如果要让盒子在中间，那么可以设置为：auto auto */
+            /*  */
+            margin: 30px 50px;
         }
     </style>
 </head>
 
 <body>
-<!--文字类元素内不能放放块级元素，例：<p>和<h1~6>内不能放div-->
-<p>    12341<br />233</p>
-<p> qwe<strong>xzczx</strong></p>
-<em>倾斜</em>
-<del>删除线</del>
-<ins>下划线</ins>
-<div  >块元素，独占一行
-    <sapn>123</sapn>
-    <sapn>234 </sapn>
-    <sapn>345</sapn>
-</div>
+    <!--文字类元素内不能放放块级元素，例：<p>和<h1~6>内不能放div-->
+    <p> 12341<br />233</p>
+    <p> qwe<strong>xzczx</strong></p>
+    <em>倾斜</em>
+    <del>删除线</del>
+    <ins>下划线</ins>
+    <div>块元素，独占一行
+        <sapn>123</sapn>
+        <sapn>234 </sapn>
+        <sapn>345</sapn>
+    </div>
     <p> 12341<br />233</p>
     <p> qwe<strong>xzczx</strong></p>
     <em>倾斜</em>

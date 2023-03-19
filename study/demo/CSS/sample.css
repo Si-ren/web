@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    /*去除li的小黑点*/
+    list-style-type: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix {
+    /*IE 6,7专有*/
+    *zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.navigation {
+    float: left;
+    margin-left: 60px;
+
+}
+
+.navigation ul li {
+    float: left;
+    margin: 0 15px;
+    padding: 0 10px;
+}
+
+/*这边犯了个错,不是li要设置为block,是要把a设置为block*/
+.navigation ul li a {
+    display: block;
+
+
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.navigation ul li a:hover {
+    border-bottom: 1px solid #00a4ff;
+    color: #00a4ff;
+}
+
+.header {
+    overflow: hidden;
+    width: 1200px;
+    height: 40px;
+    background-color: #0e5b82;
+    margin: 30px auto;
+}
+
+/*navgation中logo模块*/
+.logo {
+    float: left;
+    width: 200px;
+    height: 40px;
+    background-color: aqua;
+
+}
+
+/*navgation中search模块*/
+.search {
+    float: left;
+    width: 410px;
+    height: 40px;
+    background-color: skyblue;
+    padding-left: 30px;
+}
+
+.search input {
+    float: left;
+    width: 358px;
+    height: 38px;
+    border: 1px solid skyblue;
+    border-right: none;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left: 10px;
+
+}
+
+.search button {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background: url(../images/搜索_search.png) center no-repeat;
+    background-size: 30px 30px;
+    border: none;
+
+}
+
+.user {
+    float: right;
+    margin-right: 30px;
+    height: 40px;
+    background-color: #918080;
+}
+
+.user input {
+    float: right;
+    width: 100px;
+    height: 40px;
+    background: url(../images/头像_avatar.png) left no-repeat;
+    background-size: 30px 30px;
+    border: none;
+    border-radius: 30px 30px;
+    padding-left: 40px;
+}
+
+.banner {
+    background-color: lightskyblue;
+    height: 500px;
+}
+
+.banner .w {
+    height: 450px;
+}
+
+.banner .subnav {
+    width: 200px;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.banner ul li {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+.banner ul li a {
+
+    font-size: 14px;
+    color: #fff;
+}
+
+.banner ul li a span {
+    float: right;
+    font-size: 14px;
+    color: #fff;
+}
+
+.banner ul li :hover {
+    color: #00a4ff;
+    border: none;
+}
+

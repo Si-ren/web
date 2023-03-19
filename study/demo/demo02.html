@@ -7,6 +7,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 600px;
+            border: gray;
+            /*盒子阴影*/
+            box-shadow: 10px 10px 10px 10px gray;
+        }
+
+        .box h3 {
+            height: 30px;
+            /*dotted是点线 solid是实线*/
+            border-bottom: 1px dotted #ccc;
+            font-size: 15px;
+            line-height: 30px;
+            font-weight: 400;
+            padding-left: 15px;
+        }
+
+        .box ul {
+            margin-top: 5px;
+            /*这里设置圆角没用，得在a标签中设置*/
+            /*border-radius: 10px;*/
+
+        }
+
+        .box ul li {
+
+            height: 30px;
+            /*这里设置圆角没用，得在a标签中设置*/
+            /*border-radius: 10px;*/
+            line-height: 30px;
+        }
+
         a {
             width: 200px;
             height: 30px;
@@ -19,23 +57,28 @@
             display: block;
         }
 
-        a:link {
+        .box ul li a:link {
             color: blue;
             background-color: #26bfd0;
+
+            border-radius: 10px;
+
         }
 
-        a:visited {
+        .box ul li a:visited {
             background-color: gray;
             color: purple;
         }
 
-        a:hover {
+        .box ul li a:hover {
             background-color: #650edf;
+            text-decoration: underline;
+            text-underline: lightgoldenrodyellow;
             color: red;
         }
 
 
-        a:active {
+        .box ul li a:active {
             background-color: chartreuse;
             color: green;
         }
@@ -49,5 +92,20 @@
 <a href="http://www.qq.com">智能</a>
 <a href="http://www.qq.com">健康</a>
 <a href="http://www.qq.com">耳机</a>
+-------
+<div class="box">
+    <h3>title1</h3>
+    <div>
+        <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>
+    </div>
+
+</div>
+
 </body>
 </html>

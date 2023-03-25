@@ -129,13 +129,24 @@ ul {
 }
 
 .banner .w {
+    float: left;
+    width: 200px;
     height: 450px;
 }
 
 .banner .subnav {
+
     width: 200px;
     height: 450px;
     background-color: rgba(0, 0, 0, 0.3);
+}
+
+.banner .course {
+    float: right;
+    width: 200px;
+    height: 300px;
+    margin-top: 50px;
+    background-color: aquamarine;
 }
 
 .banner ul li {

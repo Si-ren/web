@@ -31,7 +31,6 @@ ul {
 }
 
 .navigation {
-    float: left;
     margin-left: 60px;
 
 }
@@ -171,4 +170,3 @@ ul {
     color: #00a4ff;
     border: none;
 }
-

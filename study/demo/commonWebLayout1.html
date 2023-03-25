@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,10 +9,12 @@
     <link rel="stylesheet" href="CSS/sample.css">
     <title>SampleDemo1</title>
 </head>
+
 <body>
 <!--头部区域-->
-<!--清除浮动方法2: clearfix 没效果-->
-<!--清除浮动方法2: overflow: hidden 没效果-->
+<!-- 清除浮动，父元素不能浮动，不然没效果 -->
+<!--清除浮动方法2: clearfix 伪元素清除浮动-->
+<!--清除浮动方法3: overflow: hidden 通过触发BFC方式，实现清除浮动 -->
 <div class="navigation header clearfix">
     <div class="logo">
         <img src="images/logo.png" alt="">待插入图片
@@ -23,6 +26,7 @@
             <li><a href="#">职业规划</a></li>
         </ul>
     </div>
+
     <div class="search">
         <input type="text" value="请输入搜索关键字">
         <button>搜索</button>
@@ -30,10 +34,12 @@
     <div class="user">
         <input type="button" value="username">
     </div>
+    <!--清除浮动方式1,必须是块元素,-->
+    <!-- <div class="clear"></div> -->
 
 </div>
 <!--清除浮动方式1,必须是块元素-->
-<div class="clear"></div>
+<!-- <div class="clear"></div> -->
 
 <!--头部区域-->
 <!--banner-->
@@ -52,12 +58,10 @@
                 <li><a href="#">123 <span>&gt;</span></a></li>
             </ul>
         </div>
-
     </div>
-    <div class="course">
 
-    </div>
 </div>
 <!--banner-->
 </body>
+
 </html>

@@ -13,3 +13,43 @@ body {
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
 }
+
+.search-index {
+    /* 固定定位跟父级没有关系以屏幕为主 */
+    position: fixed;
+    top: 0;
+    /* 屏幕居中 */
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    max-width: 540px;
+    min-width: 320px;
+    /* 固定盒子必须要有宽度 */
+    width: 100%;
+    height: 44px;
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+.search {
+    position: relative;
+    flex: 1
+}
+
+.user {
+    position: relative;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    display: block;
+    background-color: beige;
+}
+
+.user::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../images/sprite.png) no-repeat -59px -194px;
+
+}

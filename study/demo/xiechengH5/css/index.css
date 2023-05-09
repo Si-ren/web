@@ -105,9 +105,9 @@ a {
 /* 局部导航栏 */
 .local-nav {
     display: flex;
-    margin: 4px 3px;
+    margin: 4px 0px;
     width: 100%;
-    height: 105px;
+    height: 65px;
     background: skyblue;
     border-radius: 5px;
 }
@@ -118,6 +118,65 @@ a {
 
 .local-nav li a {
     display: flex;
+    /*  把主轴变为Y轴 */
+    flex-direction: column;
+    /* 侧轴居中对齐 */
+    align-items: center;
 }
 
-.nav-icon {}
+.nav-icon {
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    background-color: aqua;
+    margin-top: 8px;
+}
+
+nav {}
+
+nav .nav-common {
+    display: flex;
+    border-radius: 5px;
+    background-color: bisque;
+    height: 88px;
+}
+
+nav .nav-common:nth-child(2) {
+    margin: 4px 0px;
+    border-radius: 0px;
+}
+
+nav .nav-common .nav-items {
+    flex: 1;
+    display: flex;
+}
+
+nav .nav-common .nav-items:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+}
+
+
+
+nav .nav-common .nav-items:nth-child(n+1) {
+    display: flex;
+    flex-direction: column;
+}
+
+
+nav .nav-common .nav-items a:nth-child(1) {
+    border-bottom: 1px solid #fff;
+}
+
+nav .nav-common .nav-items:nth-child(1) a {
+    border: 0;
+}
+
+nav .nav-common .nav-items a {
+    flex: 1;
+    display: block;
+    border-color: #fff;
+    text-align: center;
+    line-height: 44px;
+    text-decoration: none;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}

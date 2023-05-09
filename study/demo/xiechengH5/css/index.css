@@ -132,7 +132,8 @@ a {
     margin-top: 8px;
 }
 
-nav {}
+nav {
+}
 
 nav .nav-common {
     display: flex;
@@ -155,7 +156,23 @@ nav .nav-common .nav-items:nth-child(-n+2) {
     border-right: 1px solid #fff;
 }
 
+nav .nav-common:nth-child(1) {
+    /*渐变色*/
+    /*背景渐变必须添加浏览器私有前缀*/
+    background: -webkit-linear-gradient(right, red, blue);
+}
 
+nav .nav-common:nth-child(2) {
+    /*渐变色*/
+    /*背景渐变必须添加浏览器私有前缀*/
+    background: -webkit-linear-gradient(right, red, blue);
+}
+
+nav .nav-common:nth-child(3) {
+    /*渐变色*/
+    /*背景渐变必须添加浏览器私有前缀*/
+    background: -webkit-linear-gradient(right, red, blue);
+}
 
 nav .nav-common .nav-items:nth-child(n+1) {
     display: flex;
@@ -179,4 +196,16 @@ nav .nav-common .nav-items a {
     line-height: 44px;
     text-decoration: none;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.subnav-entry {
+    display: flex;
+    /* flex 可以换行*/
+    flex-wrap: wrap;
+    background: #666666;
+    margin: 4px 0px;
+}
+
+.subnav-entry li {
+    flex: 20%;
 }

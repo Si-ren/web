@@ -12,11 +12,26 @@ body {
     background: #f2f2f2;
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #f6f6f6;
 }
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 
 .search-index {
     /* 固定定位跟父级没有关系以屏幕为主 */
     position: fixed;
+    display: flex;
     top: 0;
     /* 屏幕居中 */
     left: 50%;
@@ -33,7 +48,29 @@ body {
 
 .search {
     position: relative;
-    flex: 1
+    flex: 1;
+    height: 26px;
+    line-height: 24px;
+    color: #666;
+    border: 1px solid #ccc;
+    /* 先上下，再左右 */
+    margin: 6px 10px;
+    border-radius: 5px;
+    padding-left: 26px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.search::before {
+    content: "";
+    /* 决定定位不占位置，如果改成相对的定位，那么就是文字会转换到下一行 */
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: bisque;
+    background: unset url(images/sprite.png) no-repeat -59px -279px;
+    background-size: 104px auto;
 }
 
 .user {
@@ -50,6 +87,37 @@ body {
     display: block;
     width: 23px;
     height: 23px;
-    background: url(../images/sprite.png) no-repeat -59px -194px;
-
+    background: url(images/sprite.png) no-repeat -59px -194px;
+    margin: 4px auto -2px;
 }
+
+/* 焦点图 */
+.focused {
+    padding-top: 3px;
+}
+
+.focus img {
+    width: 100%;
+
+    background: burlywood;
+}
+
+/* 局部导航栏 */
+.local-nav {
+    display: flex;
+    margin: 4px 3px;
+    width: 100%;
+    height: 105px;
+    background: skyblue;
+    border-radius: 5px;
+}
+
+.local-nav li {
+    flex: 1;
+}
+
+.local-nav li a {
+    display: flex;
+}
+
+.nav-icon {}

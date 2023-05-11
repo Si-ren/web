@@ -18,29 +18,29 @@ Media Query是CSS3 新语法
 
 ```html
     <!-- 使用 @media 开头 -->
-    <!-- mediatype 媒体类型 -->
-    <!-- 关键字 -->
-    <!-- media feature 媒体特性 必须要小括号包含 -->
-    @media media and|not|only (media feature) {
-        CSS-Code;
-    }
+<!-- mediatype 媒体类型 -->
+<!-- 关键字 -->
+<!-- media feature 媒体特性 必须要小括号包含 -->
+@media media and|not|only (media feature) {
+CSS-Code;
+}
 ```
 
 ## mediatype查询类型
 
-| value      | Description |
-| ----------- | ----------- |
-| all      | 用于所有设备       |
-| print   | 用于打印机和打印预览        |
-| scree | 用于电脑屏幕，平板电脑，只能手机等|
+| value | Description       |
+|-------|-------------------|
+| all   | 用于所有设备            |
+| print | 用于打印机和打印预览        |
+| scree | 用于电脑屏幕，平板电脑，只能手机等 |
 
 ## 关键字
 
 将媒体类型或多个媒体特性连接到一起作为媒体查询条件
-| value      | Description |
+| value | Description |
 | ----------- | ----------- |
-| and      | 相当于 且       |
-| not   | 相当于 非    |
+| and | 相当于 且 |
+| not | 相当于 非 |
 | only | 指定某个特定的媒体类型，可以省略|
 
 ```html
@@ -56,16 +56,18 @@ example:
 
 ```html
 example:
-    <link rel="stylesheet" media="mediatype and|not|only (media feature)"  href="mystylesheet.css">
+<link rel="stylesheet" media="mediatype and|not|only (media feature)" href="mystylesheet.css">
 ```
 
 # less
+
+**变量运算中，除法需要加括号，运算符中间必须有空格隔开**
 
 ```html
 //定义一个粉色的变量
 @color: pink
 body {
-    background-color: @color;
+background-color: @color;
 }
 ```
 
@@ -75,16 +77,16 @@ body {
 内层选择器的前面没有&符号,则被解析为父选择器后代
 如果有&符号,被解析为父元素自身或者父元素的伪类
 
-```html
+```
 a:hover {
-    color:red;
+    color:red;
 }
 ```
 
-```html
+```
 a{
-    &:hover{
-        color:red
-    }
+    &:hover{
+        color:red
+    }
 }
 ```

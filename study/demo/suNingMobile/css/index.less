@@ -9,3 +9,80 @@ body {
   font-family: Arial;
   background: #f2f2f2;
 }
+
+@base-content: 50;
+.search-content {
+  position: fixed;
+  top: 0;
+  /*这里为啥还要居中呢？明明html中已经设置了margin为auto*/
+  //left: 50%;
+  //transform: translateX(-50%);
+  width: 15rem;
+  height: (88rem / @base-content);
+  display: flex;
+  //background-color: green;
+
+  .classify {
+    width: (44rem / @base-content);
+    height: (70rem / @base-content);
+    margin: (11rem / @base-content) (25rem / @base-content) (7rem / @base-content) (24rem / @base-content);
+    font-size: (25rem / @base-content);
+    background: url("../images/green.png") no-repeat;
+    background-size: (44rem / @base-content)  (70rem / @base-content);
+  }
+
+  .search {
+    flex: 1;
+    margin: (10rem / @base-content);
+
+    input {
+      //为什么width去掉就看不到别的了？
+      width: 100%;
+      height: (66rem /  @base-content);
+      border-radius: (33rem /  @base-content );
+      background-color: #f6f6f6;
+      border: 0;
+      margin-top: (1rem / @base-content);
+      padding-left: (55rem / @base-content);
+      padding-right: (40rem / @base-content);
+      color: #757575;
+    }
+  }
+
+  .login {
+    width: (75rem / @base-content);
+    height: (70rem / @base-content);
+    font-size: (25rem / @base-content);
+    line-height: (70rem / @base-content);
+    text-align: center;
+    color: #f2f2f2;
+    margin: (10rem / @base-content);
+    background: #26bfd0;
+    background-size: (75rem / @base-content)  (70rem / @base-content);
+
+  }
+}
+
+.banner {
+  height: (200rem / @base-content);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ad {
+  display: flex;
+  width: 15rem;
+  height: (200rem / @base-content);
+
+  a {
+    flex: 1;
+
+ 
+      width: 5rem;
+      height: 100%;
+    }
+  }
+}

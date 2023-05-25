@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>
+            <input type="checkbox">
+        </th>
+        <th>0</th>
+        <th>0</th>
+        <th>0</th>
+        <th>0</th>
+        <th>0</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>
+            <input type="checkbox">
+        </th>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <th>
+            <input type="checkbox">
+        </th>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+    </tbody>
+
+</table>
+<script>
+    let thinput = document.querySelector("thead").querySelector('input');
+    let tbinput = document.querySelector("tbody").querySelectorAll("input")
+    thinput.onclick = function () {
+        console.log(this.checked)
+        if (this.checked) {
+            for (let i = 0; i < tbinput.length; i++) {
+                tbinput[i].checked = true
+            }
+        } else {
+            for (let i = 0; i < tbinput.length; i++) {
+                tbinput[i].checked = false
+            }
+        }
+    }
+    for (let i = 0; i < tbinput.length; i++) {
+        tbinput[i].onclick = function () {
+            let flag = true
+            for (let j = 0; j < tbinput.length; j++) {
+                if (!tbinput[j].checked) {
+                    flag = false
+                    break
+                }
+            }
+            thinput.checked = flag
+        }
+
+    }
+</script>
+</body>
+</html>

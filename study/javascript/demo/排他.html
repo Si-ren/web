@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<button>4</button>
+<button>5</button>
+<script>
+    var buttons = document.getElementsByTagName("button");
+
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = function () {
+            for (let j = 0; j < buttons.length; j++) {
+                buttons[j].style.backgroundColor = "";
+            }
+            this.style.backgroundColor = "blue";
+
+        }
+    }
+
+</script>
+</body>
+</html>

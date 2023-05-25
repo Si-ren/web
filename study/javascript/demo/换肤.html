@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li><img src="images/1.jpg" alt=""></li>
+    <li><img src="images/1.jpg" alt=""></li>
+    <li><img src="images/1.jpg" alt=""></li>
+    <li><img src="images/1.jpg" alt=""></li>
+</ul>
+<script>
+    var imgs = document.querySelector('.baidu').querySelectorAll('img')
+    for (let i = 0; i < imgs.length; i++) {
+        imgs[i].onclick = function () {
+            document.body.style.backgroundImage = 'url(' + this.src + ')';
+        }
+
+    }
+
+</script>
+</body>
+</html>

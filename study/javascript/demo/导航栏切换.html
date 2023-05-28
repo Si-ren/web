@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            padding: inherit;
+        }
+
+        li {
+            list-style: none;
+            background: #6a7f82;
+            border: 1px solid red;
+            cursor: pointer;
+            text-align: center;
+            float: left;
+        }
+
+        .nav-list {
+            display: flex;
+
+        }
+
+        .nav-list .current {
+            background: #822c25;
+            color: white;
+        }
+
+        .item-info {
+            padding: 20px 0 0 20px;
+        }
+
+        .item {
+            display: none;
+            /*display: ;*/
+
+        }
+
+        .nav-content div {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <div class="nav-list">
+        <ul>
+            <li class="current">商品介绍</li>
+            <li>规格包装</li>
+            <li>售后保障</li>
+            <li>商品评价</li>
+            <li>手机社区</li>
+        </ul>
+    </div>
+    <div class="nav-content">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</div>
+<script !src="">
+    let tab_list = document.querySelector('.nav-list')
+    let list = tab_list.querySelectorAll('li')
+    let nav_content_items = document.querySelector('.nav-content').querySelectorAll('.item')
+    nav_content_items[0].style.display = 'block'
+    for (let i = 0; i < list.length; i++) {
+        list[i].setAttribute('index', i.toString())
+
+        list[i].onclick = function () {
+            for (let j = 0; j < list.length; j++) {
+                list[j].className = ''
+            }
+            this.className = 'current'
+            //     显示内容
+            let i = this.getAttribute('index')
+            for (let j = 0; j < nav_content_items.length; j++) {
+                nav_content_items[j].style.display = 'none'
+            }
+            nav_content_items[i].style.display = 'block'
+        }
+    }
+</script>
+</body>
+</html>

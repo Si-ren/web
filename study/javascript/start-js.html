@@ -18,5 +18,19 @@
 <input type="button" value="alert" onclick="alert('告警');">
 
 </body>
-
-</html>
+<script !src="">
+    var fn = function () {
+        console.log("alert")
+    }
+    // window.setTimeout()可以在调用的时候可以省略window
+    // 单位是毫秒, 可以省略,省略默认是0
+    var timer = window.setTimeout(fn, 500)
+    // 停止倒计时
+    window.clearTimeout(timer)
+    // 每隔一段时间,就调用一次回调函数
+    window.setInterval(fn, 3000)
+    window.setInterval(function () {
+        console.log("setInterval")
+    }, 1000)
+</script>
+</html> 

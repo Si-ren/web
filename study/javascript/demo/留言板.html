@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            width: 200px;
+            height: 1000px;
+            border: 1px solid pink;
+            outline: none;
+            resize: none;
+        }
+
+        li {
+            width: 300px;
+            padding: 5px;
+            background: #827a78;
+            font-size: 14px;
+            margin: 15px 0px;
+        }
+
+        li a {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<textarea name="" id="">123</textarea>
+<button>发布</button>
+<ul>
+
+</ul>
+<script !src="">
+    const btn = document.querySelector('button');
+    const text = document.querySelector('textarea');
+    const ul = document.querySelector('ul');
+    btn.onclick = function () {
+        let t = text.value.trim()
+        if (t == '') {
+            alert("请输入字符")
+            return
+        }
+        // 创建元素
+        let li = document.createElement('li')
+        // 元素赋值
+        li.innerHTML = t + "<a href='javascript:;'>删除</a>"
+        // 后插元素
+        // ul.appendChild(li)
+        // 前插元素
+        ul.insertBefore(li, ul.children[0])
+
+        //     删除元素
+        var as = document.querySelectorAll('a')
+        for (let i = 0; i < as.length; i++) {
+            as[i].onclick = function () {
+                // node.removeChild(child)
+                ul.removeChild(this.parentNode)
+            }
+        }
+
+        //     clone元素
+        // 如果cloneNode()的参数为空或者false 浅拷贝 只复制标签不复制内容里面子节点
+        // 如果cloneNode()的参数为true 深拷贝 完全复制，包括节点本身和其子节点
+        let lc = ul.children[0].cloneNode(true)
+        ul.appendChild(lc)
+    }
+    document.createElement()
+    document.write()
+    element.innerHTML
+
+
+</script>
+</body>
+</html>

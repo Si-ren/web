@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .assign {
+        width: 50px;
+        height: 50px;
+        background: #666666;
+        border: none;
+    }
+</style>
+<body>
+<button class="assign" name="跳转"></button>
+<script>
+    let btn = document.querySelector('button.assign')
+    btn.addEventListener('click', function () {
+        location.assign("延迟跳转界面1.html")    //这里看起来只能是相对路径 http://localhost:63342/test/javascript/demo/www.baidu.com
+
+        // location.replace('https://www.baidu.com')    //替换当前页面，直接跳转到百度
+        console.log(location.href)
+    })
+</script>
+</body>
+</html>

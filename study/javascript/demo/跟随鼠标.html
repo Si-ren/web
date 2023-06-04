@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .mouse {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+</style>
+<body>
+<img class="mouse" src="images/blue.png">
+<script>
+    <!--    在页面中移动，所以给document注册事件-->
+    // 图片需要移动距离，但是不占位置，所以用绝对定位
+    // 鼠标移动获取最新坐标,把图片属性赋值就行
+    var mouse = document.querySelector('img')
+    document.addEventListener('mousemove', function (e) {
+        console.log(e.clientX + 'px', e.clientY + 'px')
+        let x = e.pageX;
+        let y = e.pageY;
+        // mouse.style.transform = "translate(" + x + "px, " + y + "px)";
+        mouse.style.left = x + 'px'
+        mouse.style.top = y + 'px'
+    })
+
+</script>
+</body>
+</html>

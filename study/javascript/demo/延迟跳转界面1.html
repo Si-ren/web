@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span>等待5秒后自动跳转</span>
+<script>
+    let spa = document.querySelector('span')
+
+    let t = 5
+    let f1 = window.setInterval(function () {
+        if (t < 1) {
+            clearInterval(f1)
+            location.replace("https://www.baidu.com")
+            return
+        }
+        spa.innerHTML = '等待' + t + '秒后自动跳转'
+        t--
+    }, 1000)
+
+    //
+    // for (let i = 0; i < t; i++) {
+    //     let f2 = window.setTimeout(function () {
+    //         if (t < 0) {
+    //             clearTimeout(f2)
+    //             location.replace("https://www.baidu.com")
+    //         }
+    //         spa.innerHTML = '等待' + t + '秒后自动跳转'
+    //         t--
+    //     }, 1000)
+    // }
+</script>
+</body>
+</html>

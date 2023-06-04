@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .note {
+
+    }
+</style>
+<body>
+<input type="text" name="短信">
+<button class="note" type="submit" name="短信">短信</button>
+<script !src="">
+
+    // 选定特定类的标签 button.note 代表   <button class="note"></button>
+    let btn = document.querySelector('button.note')
+    btn.onclick = function () {
+        console.log('点击事件')
+        btn.disabled = true
+        // 设计倒计时60秒
+        let i = 60
+        let countdown = window.setInterval(function () {
+            i--
+            if (i < 0) {
+                // 重点,这边要取消倒计时任务
+                clearInterval(countdown)
+                btn.disabled = false
+                btn.innerHTML = '发送短信'
+                return
+            }
+            let t = i < 10 ? '0' + i : i
+            btn.innerHTML = t + 's'
+        }, 1000)
+    }
+</script>
+</body>
+</html>

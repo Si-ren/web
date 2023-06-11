@@ -97,3 +97,7 @@ PC端如果完全需要兼容，就用传统模式，不考虑兼容性，就选
 -webkit-tap-highlight-color: transparent; #点击高亮我们需要清除，设置为transparent完成透明
 -webkit-appearance: none; #在移动段浏览器默认的外观在ios上加上这个属性才能给按钮和输入框自定义样式
 img,a {-webkit-touch-callout:none;} #禁用长按页面时弹出菜单
+
+# 杂
+
+opacity: .5 #透明度

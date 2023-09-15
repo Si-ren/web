@@ -40,7 +40,7 @@ innerHTML识别html标签 W3C标准
 也就是如果这句话在某事件中，例如点击
 
 ```html
-document.write('
+document.write('n
 <div>123</div>');
 ```
 

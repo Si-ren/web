@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="detail.js">
+
+    </script>
+    <style type="text/css">
+        .box {
+            position: relative;
+            width: 398px;
+            height: 398px;
+            border: 1px solid rgb(224, 224, 224);
+        }
+
+        .mask {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #FEDE4F;
+            opacity: .5;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            cursor: move;
+        }
+
+        .big {
+            display: none;
+            width: 500px;
+            height: 500px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 410px;
+            background-color: pink;
+            z-index: 999;
+        }
+
+        .big img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            var box = document.querySelector('.box');
+            var big = document.querySelector('.big');
+            var mask = document.querySelector('.mask');
+            var bigImg = document.querySelector('.bigImg');
+            //1.当我们鼠标经过 手机图片 就显示 和隐藏 mask 遮挡层 与 big大盒子
+            box.addEventListener('mouseover', function () {
+                mask.style.display = 'block';
+                big.style.display = 'block';
+            });
+            box.addEventListener('mouseout', function () {
+                mask.style.display = 'none';
+                big.style.display = 'none';
+            });
+            //2.鼠标移动时，让黄色的盒子跟着鼠标走
+            box.addEventListener('mousemove', function (e) {
+                //（1）.先计算出鼠标在盒子内的坐标
+                var x = e.pageX - this.offsetLeft;
+                var y = e.pageY - this.offsetTop;
+                //（2）.盒子 遮罩层的高度是300 减去150是为了定位到中心的位置
+                //(3) mask移动的距离
+                var maskX = x - 150;
+                var maskY = y - 150;
+                var maskMax = box.offsetWidth - mask.offsetWidth;
+                //（4）如果x坐标小于0 就让它停在0的位置
+                if (maskX <= 0) { maskX = 0; } else if (maskX >= maskMax) {
+                    maskX = maskMax;
+                }
+                if (maskY <= 0) { maskY = 0; } else if (maskY >= box.offsetHeight - mask.offsetHeight) {
+                    maskY = box.offsetHeight - mask.offsetHeight;
+                }
+                mask.style.left = maskX + 'px';
+                mask.style.top = maskY + 'px';
+                //大图片的移动距离 = 遮挡层移动距离*大图片最大移动距离 /遮挡层的最大移动距离
+                //大图片最大移动距离
+                var bigMax = bigImg.offsetWidth - big.offsetWidth;
+                //大图片的移动距离 宽高一致 因此不需要再去求高度上的距离
+                var bigX = maskX * bigMax / maskMax;
+                var bigY = maskY * bigMax / maskMax;
+                bigImg.style.left = - bigX + 'px';
+                bigImg.style.top = - bigY + 'px';
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/blue.png" class="normal">
+        <div class="mask"></div>
+        <div class="big">
+            <img src="images/direction-up.png" class="bigImg">
+        </div>
+    </div>
+</body>

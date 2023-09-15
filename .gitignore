@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.lock
+
+# Dependency directories
+**/node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# TypeScript files
+*.tsbuildinfo
+
+# Environment variables
+.env
+
+# IDE specific files
+.vscode/
+.idea/
+*.sublime-*
+
+# Test coverage reports
+coverage/
+
+# Build output
+dist/
+build/
+out/
+
+# Yarn integrity file
+.yarn-integrity
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Editor backup files
+*~
+.#*

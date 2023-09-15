@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop": true,
+        "outDir": "./dist",
+        "sourceMap": true,
+        "allowJs": false, // 是否编译js文件
+        "checkJs": false, // 是否检查js文件
+        "removeComments": false, // 是否删除注释
+        "noEmit": false, // 是否生成编译后的文件
+        "noEmitOnError": false, //当error时不编译
+        "alwaysStrict": true, // 编译后的文件是否是严格模式
+        "noImplicitAny": true, // 不允许隐式的any类型
+        "noImplicitThis": true, //不允许明确类型的this
+        "strictNullChecks": true // 严格的空值检查
+    },
+    // "include": [
+    //     "./src/**/*"
+    // ],
+    "exclude": [
+        "node_modules"
+    ]
+}
